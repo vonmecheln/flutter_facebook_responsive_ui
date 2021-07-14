@@ -4,12 +4,12 @@ import 'package:flutter_facebook_responsive_ui/models/user_model.dart';
 import 'package:flutter_facebook_responsive_ui/widgets/profile_avatar.dart';
 
 class Rooms extends StatelessWidget {
+  final List<User> onlineUsers;
+
   const Rooms({
     Key? key,
-    required List<User> this.onlineUsers,
+    required this.onlineUsers,
   }) : super(key: key);
-
-  final List<User> onlineUsers;
 
   @override
   Widget build(BuildContext context) {
