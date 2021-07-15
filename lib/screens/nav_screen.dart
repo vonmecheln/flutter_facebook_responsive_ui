@@ -53,7 +53,7 @@ class _NavScreenState extends State<NavScreen> {
           physics: NeverScrollableScrollPhysics(),
           children: _screens,
         ),
-        bottomNavigationBar: Responsive.isDesktop(context)
+        bottomNavigationBar: !Responsive.isDesktop(context)
             ? Padding(
                 padding: const EdgeInsets.only(bottom: 12),
                 child: CustomTabBar(
