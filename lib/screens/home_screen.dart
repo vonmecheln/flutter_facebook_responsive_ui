@@ -123,8 +123,12 @@ class _HomeScreenDesktop extends StatelessWidget {
       children: [
         Flexible(
           flex: 2,
-          child: Container(
-            color: Colors.orange,
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: MoreOptionsList(currentUser: currentUser),
+            ),
           ),
         ),
         const Spacer(),
@@ -167,14 +171,15 @@ class _HomeScreenDesktop extends StatelessWidget {
         ),
         const Spacer(),
         Flexible(
-            flex: 2,
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: ContactsList(users: onlineUsers),
-              ),
-            )),
+          flex: 2,
+          child: Align(
+            alignment: Alignment.centerRight,
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: ContactsList(users: onlineUsers),
+            ),
+          ),
+        ),
       ],
     );
   }
